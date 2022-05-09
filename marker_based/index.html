@@ -12,49 +12,63 @@
     <!-- speech command component -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.5.0/annyang.min.js"></script>
     <script src="build/aframe-speech-command-component.js"></script> 
-    
-<a-entity camera></a-entity>
-        </a-scene>
-    <a-scene>
-     <!--Reading my dpsd marker-->
-     <a-marker-camera type='pattern' url='assets/pattern-DPSD19047.patt'>
-        <!--Showing my name and the image-->
-        <a-text value="Rania" position="1 0.5 0" ></a-text>
-        <a-text value="Karouzou" position="1 1 0"></a-text>
-        <a-image src="assets/dalmatian.jpg" position="0 0.5 0"></a-image>
-        </a-marker-camera>
-    
-    
-       <!--Define the glb hydro asset-->
-       <a-assets>
-       <a-asset-item id="hydro" src="assets/hydrogen.gltf"></a-asset-item>
-       </a-assets>
-       <!--Reading and showing the H atom-->
-       <a-marker type='pattern' url='assets/pattern-card-H.patt'>
-       <!--use the glb hydro model-->
-       <a-entity gltf-model="#hydro" scale= "0.8 0.8 0.8";></a-entity>
-       </a-marker>
-    
-    
-        <!--Define the glb oxy asset-->
-        <a-assets>
-        <a-asset-item id="oxy" src="assets/oxygen.gltf"></a-asset-item>
-        </a-assets>
-        <!--Reading and showing the O atom-->
-        <a-marker type='pattern' url='assets/pattern-card-O.patt'>
-         <!--use your glb oxy model-->
-         <a-entity gltf-model="#oxy" scale= "0.5 0.5 0.5";></a-entity>
-        </a-marker>
-
+        
         <a-marker preset="hiro">
             <a-entity id="box" geometry="primitive: box; width: 0.2; depth: 0.2; height: 0.2;" position="0 0 0" material="color: #4CC3D9"></a-entity>
             <a-entity id="sphere" geometry="primitive: sphere; radius:0.25" position="0 0.25 -0.5"  material="color: #EF2D5E"></a-entity>
             <a-entity id="cylinder" geometry="primitive: cylinder; height: 0.4; radius:0.1" position="1 0.75 -0.3"  material="color: #FFC65D"></a-entity>            
         </a-marker>
 
-        
+  <a-scene>    
+<!--2-->
+
+  <!--Pattern-->
+        <a-marker preset="pattern" type="pattern" url="assets/pattern-DPSD19047.patt">
+            <a-text text="value: Karouzou " position="-1.5 0 0" color= "#D73D3F"></a-text>
+            <a-image src="assets/dalmatian.jpg"></a-image>
+            <a-text text="value: Rania " position="-1.5 0.5 0" color= "#F4D35E"></a-text>
+        </a-marker>
+
+  <!--magic-->
+        <a-assets>
+		      <img id="hydrogen" src="assets/pattern-card-H.png" />
+		      <img id="oxygen" src="assets/pattern-card-O.png" />
+	     </a-assets>
+
+       <a-assets>
+           <a-asset-item id="hydrogen" src="assets/hydrogen.gltf"></a-asset-item>
+       </a-assets>
+
+       <a-assets>
+           <a-asset-item id="oxygen" src="assets/oxygen.glb"></a-asset-item>
+       </a-assets>
+
+        <a-marker type="barcode" value="8" id="oxygenmarker">
+          <a-image src="assets/card-O.png" rotation="-90 0 0" geometry="width: 2.3; height: 2.3"></a-image>
+          <a-entity   position="0 1.5 0"
+                  rotation="0 0 0"
+                  scale="0.3 0.3 0.3"
+                  gltf-model="#oxygen"
+                  animation__rotate = "property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;" >
+          </a-entity>
+        </a-marker>
+
+        <a-marker type="barcode" value="39" id="hydrogenmarker">
+            <a-image src="assets/card-H.png" rotation="-90 0 0" geometry="width: 2.3; height: 2.3"></a-image>
+            <a-entity   position="0 1.5 0"
+                    rotation="0 0 0"
+                    scale="0.3 0.3 0.3"
+                    gltf-model="#hydrogen"
+                    animation__rotate = "property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;" >
+            </a-entity>
+        </a-marker>     
+            
+    
+        <a-entity camera></a-entity>
+        </a-scene>      
 
         <a-entity camera></a-entity>
         </a-scene>
+    
     </body>
 </html>
