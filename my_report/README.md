@@ -24,7 +24,7 @@
 2)Στην συνέχεια μέσω του (https://jeromeetienne.github.io/AR.js/three.js/examples/marker-training/examples/generator.html) έφτιαξα τα markers των εικόνων του dpsd μου,του οξυγόνου και του υδρογόνου 
 3)Έφτιαξα στο Blender το άτομο του οξυγόνου και το άτομο του υδρογόνου τα αποθήκευσα σαν gltf αρχείο και τα προσάρμοσα στον κώδικα.
 4)Ανέβασα στο GitHub->assets τα παρακάτω
-[DPSD19047.png]
+([DPSD19047.png]
 [card-H.png] 
 [card-O.png]
 [dalmatian.jpg]
@@ -35,7 +35,7 @@
 [pattern-card-H.patt] 
 [pattern-card-H.png]
 [pattern-card-O.patt]
-[pattern-card-O.png]
+[pattern-card-O.png])
 5)Τέλος έκανα τα adjustments που χρειαζόντουσαν στον κώδικα έτσι ώστε να εμφανίζει ότι χρειάζεται, ανάλογα με το κάθε marker.
 # 3rd Deliverable
 
