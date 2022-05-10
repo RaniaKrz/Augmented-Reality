@@ -1,8 +1,8 @@
 # Lesson: Interaction Design
 
-### First and Last Name: Rania Karouzou
+### First and Last Name: Ourania Karouzou
 ### University Registration Number: dpsd19047
-### GitHub Personal Profile: [Rania Karouzou](https://github.com/RaniaKrz)
+### GitHub Personal Profile: [Ourania Karouzou](https://github.com/RaniaKrz)
 ### Augmented Reality Personal Repository: https://github.com/RaniaKrz/Augmented-Reality
 
 # Introduction
