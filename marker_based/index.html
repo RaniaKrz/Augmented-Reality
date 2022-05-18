@@ -14,61 +14,60 @@
     
 
     <body style="margin : 0px; overflow: hidden;">
-        <a-scene
-    vr-mode-ui="enabled: false;"
-    renderer="logarithmicDepthBuffer: true;"
-    embedded
-    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
+        <a-scene vr-mode-ui="enabled: false;"
+                 renderer="logarithmicDepthBuffer: true;"
+                 embedded arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;">
         
-         <a-marker preset="hiro">
-             <!-- sximata -->
-            <a-entity id="box" geometry="primitive: box; width: 0.5; depth: 0.5; height: 0.5" position="0 0 0" material="color: #4CC3D9"></a-entity>
-            <a-sphere position="1 1 1" radius="0.5" color="#EF2D5E"></a-sphere>
-            <a-cylinder position="-1 -1 -1" radius="0.5" height="1.0" color="#FFC65D"></a-cylinder>
+         <a-assets>
+            <img id="my-image" src="assets/vanlee.png">
+            <img id="hydrogen" src="assets/card-H.png">
+            <img id="oxygen" src="assets/card-O.png">
+         </a-assets>                      
+                                
+                      
+        
+        <a-marker preset="hiro">
+
+            <a-entity id="box" geometry="primitive: box; width: 0.2; depth: 0.2; height: 0.2;" position="0 0 0" material="color: #4CC3D9"></a-entity>
+            <a-entity id="sphere" geometry="primitive: sphere; radius:0.25" position="0 0.25 -0.5" material="color: #EF2D5E"></a-entity>
+            <a-entity id="cylinder" geometry="primitive: cylinder; height: 0.4; radius:0.1" position="1 0.75 -0.3" material="color: #FFC65D"></a-entity>
+
             <a-entity id="annyang" annyang-speech-recognition></a-entity>
+            <a-entity position="0 2 -15" particle-system="preset: snow; particleCount: 10000"
+                      visible="false"
+                      speech-command__start="command: start; type: attribute; attribute: visible; value: true;"
+                      speech-command__stop="command: stop; type: attribute; attribute: visible; value: false;">
+            </a-entity>
+        </a-marker>
+        
+        
+        <!-- DELIVERABLE 2-->       
+        
+        <!-- DPSD marker component -->
+        <a-marker preset='custom' type='pattern' url='assets/pattern-dpsd19047.patt'>
+            <a-image src="#image" width="1" height="1" rotation="90 180 0" position="0 0.2 0"></a-image>         
+            <a-text value="Ourania Karouzou" rotation="-90 0 0" position="0 0.2 0.8" color="black" text="font: monoid; align: center;"></a-text>         
             
-            <!--snow-->
-            <a-entity id="menu" position="0 2.25 -15" particle-system="preset: snow" visible= "false" 
-            speech-command__show="command: start; type: attribute; attribute: visible; value: true;" 
-            speech-command__hide="command: stop; type: attribute; attribute: visible; value: false;"></a-entity>
-       </a-marker>
-            
-      <a-entity camera></a-entity>
-      </a-scene>
-<a-scene>
-<!--2-->
+        </a-marker>
+        
+        <!-- Hydrogen marker component -->
+        <a-marker preset='custom' type='pattern' url='assets/hydrogen.glfd'>     
+            <a-image src="#hydrogen" width="1" height="1" rotation="-90 0 0" position="0 0 0"></a-image>            
+            <a-video src="#Hydrogen" width="1" height="1" position="0 0.5 0" rotation="-90 0 0" alpha-test="0.5"></a-video>
+        </a-marker>
 
-    <a-marker-camera type='pattern' url='assets/pattern-DPSD19047.patt'>
-    <!--Showing my name and the image-->
-    <a-text value="Karouzou" position="1 0.5 0" ></a-text>
-    <a-text value="Rania" position="1 1 0"></a-text>
-    <a-image src="assets/dalmatian.jpg" position="0 0.5 0"></a-image>
-    </a-marker-camera>
+        <!-- Oxygen marker component -->
+        <a-marker preset='custom' type='pattern' url='assets/Oxygen.glfd'>
+            <a-image src="#oxygen" width="1" height="1" rotation="-90 0 0" position="0 0.2 0"></a-image>
+             <a-video src="#Oxygen" width="1" height="1" position="0 0.5 0" rotation="-90 0 0" 
+                     material = "shader:standard; color:blue; emissive:red; emissiveIntensity:2"></a-video>            
+        </a-marker>
+        
 
-
-    <a-assets>
-    <a-asset-item id="hydrogen" src="assets/Hydrogen.gltf"></a-asset-item>
-    </a-assets>
-    <a-marker type='pattern' url='assets/pattern-card-H.patt'>
-    <a-entity gltf-model="#hydrogen" scale= "0.2 0.2 0.2";></a-entity>
-    </a-marker>
-
-
-    <!--Define the gltf oxy asset-->
-    <a-assets>
-    <a-asset-item id="oxygen" src="assets/Oxygen.gltf"></a-asset-item>
-    </a-assets>
-    <!--Reading and showing the O atom-->
-    <a-marker type='pattern' url='assets/pattern-card-O.patt'>
-    <!--use your glb oxy model-->
-    <a-entity gltf-model="#oxy" scale= "0.5 0.5 0.5";></a-entity>
-    </a-marker>
-            
-    
-              
+        
 
         <a-entity camera></a-entity>
-        </a-scene>
-    
-    </body>
+
+    </a-scene>
+</body>
 </html>
