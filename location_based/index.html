@@ -7,9 +7,7 @@
     <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
     <!-- <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>-->
     <script src='build/aframe-ar-nft.js'></script>
-	
-	
-	 <script>
+    <script>
    		  AFRAME.registerComponent("information", {
    			init: function() {
    			let toggle = false
@@ -23,9 +21,11 @@
    			      }
    		      })
    	</script>
-	
-	
+
+
+
 </head>
+
 
 
 <body style='margin: 0; overflow: hidden;'>
@@ -39,13 +39,13 @@
         </a-entity>
 
         <a-assets>
-            <a-asset-item id="colosseum" src="assets/colosseum/scene.gltf"></a-asset-item>
+            <a-asset-item id="colosseum" src="./assets/colosseum/scene.gltf"></a-asset-item>
         </a-assets>
 
 	    <a-entity id="colosseum_model" position="0 0 -180" class="click"
                       scale="5 5 5"
                       gltf-model="#colosseum"
-		                  animation__rotate = "property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"
+		         animation__rotate = "property: rotation; dur: 5000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;"
                       gps-entity-place="latitude: 44.506477; longitude: 11.301524;" information>
             </a-entity>
 			     
@@ -61,8 +61,7 @@
 
         <a-camera
             rotation-reader
-            gps-camera="simulateLatitude: 41.890251; simulateLongitude: 12.492373; minDistance: 1; maxDistance: 700;"
-        >
+            gps-camera="simulateLatitude: 41.890251; simulateLongitude: 12.492373; minDistance: 1; maxDistance: 700;" >
 		</a-camera>
 	</a-scene>
 </body>
