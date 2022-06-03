@@ -1,0 +1,11 @@
+Model Information:
+* title:	Parthenon
+* source:	https://sketchfab.com/3d-models/parthenon-abb233a40ca9452a8b9313d376ade2ab
+* author:	edgaro (https://sketchfab.com/edgaro)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Parthenon" (https://sketchfab.com/3d-models/parthenon-abb233a40ca9452a8b9313d376ade2ab) by edgaro (https://sketchfab.com/edgaro) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
