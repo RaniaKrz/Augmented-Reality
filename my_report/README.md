@@ -35,7 +35,7 @@
 <br>3)Έπειτα πρόσθεσα το αρχείο .gltf που είχα κατεβάσει προκειμένου να παίξει το animation.
 <br>4)Για το 2ο ζητούμενο πρόσθεσα στον κώδικα μου ορισμένες εντολές [βάση αυτού του παραδείγματος](https://glitch.com/edit/#!/salty-partner-1?path=index.html%3A11%3A21) , έτσι ώστε όταν κάνετε κλικ στο animation, να εμφανίζεται το text.
 ![This is an image](https://github.com/RaniaKrz/Augmented-Reality/blob/main/location_based/assets/diadrastikiparthenon.png)
-<br>5)Για το τρίτο ζητούμενο κατέβασα μια φωτογραφία του Δημαρχείου (dhmarxeio.jpg) που βρίσκεται στην πλατεία Μιαούλη της Σύρου απο το Google. 
+<br>5)Για το τρίτο ζητούμενο κατέβασα μια φωτογραφία του Δημαρχείου ![This is an image](https://github.com/RaniaKrz/Augmented-Reality/blob/main/location_based/assets/dhmarxeio.jpg) που βρίσκεται στην πλατεία Μιαούλη της Σύρου απο το Google. 
 Προσάρμοσα τα απαραίτητα Latitude και Longitude για να εμφανίζεται στην οθώνη.
 # Conclusions
 
